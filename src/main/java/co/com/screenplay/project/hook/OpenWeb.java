@@ -22,7 +22,7 @@ public class OpenWeb implements Task {
     }
 
     @Override
-    @Step("{0} abre el navegador web")
+    @Step("{0} abre el navegador web.")
     public <T extends Actor> void performAs(T actor) {
         String pathWebURL = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty(WEB_URL);
         actor.attemptsTo(Open.url(pathWebURL));
